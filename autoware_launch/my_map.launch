@@ -1,0 +1,10 @@
+<launch>
+
+
+
+  <!-- Point Cloud -->
+  <node pkg="map_file" type="points_map_loader" name="points_map_loader" args="noupdate $(env HOME)/carla-autoware/autoware_data/point_map/Town02_binary.pcd" /> 
+
+  <!-- Vector Map -->
+  <node pkg="map_file" type="vector_map_loader" name="vector_map_loader" args="$(env HOME)/carla-autoware/autoware_data/vector_map/area.csv $(env HOME)/carla-autoware/autoware_data/vector_map/idx.csv $(env HOME)/carla-autoware/autoware_data/vector_map/lane.csv $(env HOME)/carla-autoware/autoware_data/vector_map/line.csv $(env HOME)/carla-autoware/autoware_data/vector_map/node.csv $(env HOME)/carla-autoware/autoware_data/vector_map/point.csv $(env HOME)/carla-autoware/autoware_data/vector_map/wayarea.csv $(env HOME)/carla-autoware/autoware_data/vector_map/whiteline.csv" />
+</launch>

@@ -1,0 +1,27 @@
+<launch>
+
+  <!-- Vehicle Contorl -->
+  <include file="$(find runtime_manager)/launch_files/vehicle_socket.launch"/>
+
+ 
+  <!-- obstacle_avoid -->
+  <include file="$(find waypoint_planner)/launch/astar_avoid.launch"/>
+
+  <!-- velocity_set -->
+  <node pkg="rostopic" type="rostopic" name="config_velocity_set_rostopic"
+        args="pub -l /config/velocity_set autoware_config_msgs/ConfigVelocitySet
+        '{ header: auto, stop_distance_obstacle: 15.0, stop_distance_stopline: 10.0, detection_range: 2.0, threshold_points: 5, detection_height_top: 0.1, detection_height_bottom: -2.8, deceleration_obstacle: 5, deceleration_stopline: 4, velocity_change_limit: 30, deceleration_range: 0.7, temporal_waypoints_size: 100 }' "
+  />
+  <include file="$(find waypoint_planner)/launch/velocity_set.launch"/>
+  
+  <!-- pure_pursuit -->
+  <node pkg="rostopic" type="rostopic" name="config_waypoint_follower_rostopic"
+        args="pub -l /config/waypoint_follower autoware_config_msgs/ConfigWaypointFollower
+        '{ header: auto, param_flag: 0, lookahead_ratio: 2.0, minimum_lookahead_distance: 6.0, displacement_threshold: 0.0, relative_angle_threshold: 0.0 }' "
+  />
+  <include file="$(find waypoint_follower)/launch/pure_pursuit.launch"/> 
+ 
+  <!-- twist_filter -->
+   <include file="$(find waypoint_follower)/launch/twist_filter.launch"/> 
+
+</launch>

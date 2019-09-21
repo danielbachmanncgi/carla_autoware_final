@@ -1,0 +1,8 @@
+prefix=/home/carla/carla-autoware/catkin_ws/install
+
+Name: carla_infrastructure
+Description: Description of carla_infrastructure
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/carla/carla-autoware/catkin_ws/install/lib 
+Requires: rospy

@@ -1,0 +1,25 @@
+{
+    "submission_status": "FINISHED", 
+    "result": [
+        {
+            "accuracies": {
+                "infraction points": 47.0, 
+                "avg. route points": 100.0, 
+                "total avg.": 53.0
+            }, 
+            "show_to_participant": true, 
+            "split": "dev_split"
+        }
+    ], 
+    "stderr": "\n==================================\n==[r0:SUCCESS] [Score = 53.00 : (route_score=100.0, infractions=-47.0)]\n===== Collisions:\n========== Agent collided against object with type=vehicle.audi.etron and id=294\n========== Agent collided against object with type=vehicle.diamondback.century and id=357\n========== Agent collided against object with type=vehicle.gazelle.omafiets and id=279\n========== Agent collided against object with type=vehicle.audi.tt and id=266\n========== Agent collided against object with type=vehicle.toyota.prius and id=280\n========== Agent collided against object with type=vehicle.ford.mustang and id=292\n===== Red lights:\n========== Agent ran a red light 141 at (x=39.2700004578, y=227.129989624, x=0.219999998808)\n========== Agent ran a red light 135 at (x=179.220016479, y=243.73991394, x=0.219999998808)\n========== Agent ran a red light 142 at (x=56.6900138855, y=299.989318848, x=0.219999998808)\n===== Sidewalk invasions:\n========== Agent invaded the sidewalk\n==================================\n\n", 
+    "metadata": [
+        {
+            "accuracies": {
+                "infraction points": 47.0, 
+                "avg. route points": 100.0, 
+                "total avg.": 53.0
+            }, 
+            "stderr": "\n==================================\n==[r0:SUCCESS] [Score = 53.00 : (route_score=100.0, infractions=-47.0)]\n===== Collisions:\n========== Agent collided against object with type=vehicle.audi.etron and id=294\n========== Agent collided against object with type=vehicle.diamondback.century and id=357\n========== Agent collided against object with type=vehicle.gazelle.omafiets and id=279\n========== Agent collided against object with type=vehicle.audi.tt and id=266\n========== Agent collided against object with type=vehicle.toyota.prius and id=280\n========== Agent collided against object with type=vehicle.ford.mustang and id=292\n===== Red lights:\n========== Agent ran a red light 141 at (x=39.2700004578, y=227.129989624, x=0.219999998808)\n========== Agent ran a red light 135 at (x=179.220016479, y=243.73991394, x=0.219999998808)\n========== Agent ran a red light 142 at (x=56.6900138855, y=299.989318848, x=0.219999998808)\n===== Sidewalk invasions:\n========== Agent invaded the sidewalk\n==================================\n\n"
+        }
+    ]
+}

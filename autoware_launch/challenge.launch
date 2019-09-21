@@ -1,0 +1,29 @@
+<!-- -->
+<launch>
+  <param name="use_sim_time" value="true"/>
+  <arg name='host' default='localhost'/>
+  <arg name='port' default='2000'/>
+
+  <node pkg="tf"  type="static_transform_publisher" name="baselink_to_gnss" args="0 0 0 0 0 0 /base_link /ego_vehicle/gnss/gnss1 10" />
+  <node pkg="tf"  type="static_transform_publisher" name="baselink_to_lidar" args="1.2 0 2 0 0 0 /base_link /ego_vehicle/lidar/lidar1 10" /> 
+  <node pkg="tf"  type="static_transform_publisher" name="baselink_to_camera" args="0 0 0 0 0 0 /base_link /ego_vehicle/camera/rgb/front 10" />
+
+<!--   <include file="$(find carla_ros_bridge_aut)/launch/carla_ros_bridge_aut.launch">
+    <arg name='host' value='$(arg host)'/>
+    <arg name='port' value='$(arg port)'/>
+  </include> -->
+
+<!--   <include file="$(find carla_waypoint_publisher)/launch/carla_waypoint_publisher.launch" >
+    <arg name='host' value='$(arg host)'/>
+    <arg name='port' value='$(arg port)'/>
+  </include>  -->
+
+  <include file="$(find carla_autoware_bridge)/launch/carla_autoware_bridge_common.launch"/>
+
+  <!-- <include file="$(find carla_points_map_loader)/launch/carla_points_map_loader.launch"/> -->
+  
+
+  <include file="$(env CARLA_AUTOWARE_ROOT)/autoware.launch"/> 
+
+</launch>
+

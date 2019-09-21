@@ -1,0 +1,12 @@
+<!-- -->
+<launch>
+
+  <include file="$(env CARLA_AUTOWARE_ROOT)/my_map.launch"/>
+  <include file="/home/carla/autoware.ai/src/autoware/documentation/autoware_quickstart_examples/launch/rosbag_demo/my_sensing.launch"/>
+  <include file="/home/carla/autoware.ai/src/autoware/documentation/autoware_quickstart_examples/launch/rosbag_demo/my_localization.launch"/>
+  <include file="/home/carla/autoware.ai/src/autoware/documentation/autoware_quickstart_examples/launch/rosbag_demo/my_detection.launch"/>
+  <include file="/home/carla/autoware.ai/src/autoware/documentation/autoware_quickstart_examples/launch/rosbag_demo/my_mission_planning.launch"/>
+  <include file="/home/carla/autoware.ai/src/autoware/documentation/autoware_quickstart_examples/launch/rosbag_demo/my_motion_planning.launch"/>
+
+</launch>
+

@@ -1,0 +1,8 @@
+prefix=/home/carla/carla-autoware/catkin_ws/devel
+
+Name: carla_autoware_bridge
+Description: Description of carla_autoware_bridge
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/carla/carla-autoware/catkin_ws/devel/lib 
+Requires: rospy
