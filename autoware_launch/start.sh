@@ -23,7 +23,7 @@ rospy.spin()
 EOF
 echo "Starting Autoware."
 
-#roslaunch $CARLA_AUTOWARE_ROOT/challenge.launch
-roslaunch ~/carla-autoware/autoware_launch/challenge.launch
+roslaunch $CARLA_AUTOWARE_ROOT/autoware_launch/challenge.launch
+
 
 exit $?

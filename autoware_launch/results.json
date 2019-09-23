@@ -3,23 +3,25 @@
     "result": [
         {
             "accuracies": {
-                "infraction points": 28.0, 
-                "avg. route points": 100.0, 
-                "total avg.": 72.0
+                "weather": "WeatherParameters(cloudyness=0, precipitation=0, precipitation_deposits=0, wind_intensity=0.35, sun_azimuth_angle=0, sun_altitude_angle=75)", 
+                "infraction points": 0.0, 
+                "avg. route points": 51.7483406419163, 
+                "total avg.": 51.7483406419163
             }, 
             "show_to_participant": true, 
             "split": "dev_split"
         }
     ], 
-    "stderr": "\n==================================\n==[r0:SUCCESS] [Score = 72.00 : (route_score=100.0, infractions=-28.0)]\n===== Collisions:\n========== Agent collided against object with type=vehicle.ford.mustang and id=326\n========== Agent collided against object with type=vehicle.ford.mustang and id=342\n===== Red lights:\n========== Agent ran a red light 127 at (x=146.0, y=184.829971313, x=0.219999998808)\n========== Agent ran a red light 141 at (x=39.2700004578, y=227.129989624, x=0.219999998808)\n========== Agent ran a red light 124 at (x=122.480003357, y=243.816986084, x=0.219999998808)\n========== Agent ran a red light 135 at (x=179.220016479, y=243.73991394, x=0.219999998808)\n===== Wrong way:\n========== Agent invaded a lane in opposite direction: road_id=6, lane_id=-1\n===== Sidewalk invasions:\n========== Agent invaded the sidewalk\n==================================\n\n", 
+    "stderr": "\n==================================\n==[r0:TIMEOUT] [Score = 39.67 : (route_score=39.6662613581, infractions=-0.0)]\n==================================\n\n\n==================================\n==[r1:TIMEOUT] [Score = 63.83 : (route_score=63.8304199257, infractions=-0.0)]\n==================================\n\n", 
     "metadata": [
         {
             "accuracies": {
-                "infraction points": 28.0, 
-                "avg. route points": 100.0, 
-                "total avg.": 72.0
+                "weather": "WeatherParameters(cloudyness=0, precipitation=0, precipitation_deposits=0, wind_intensity=0.35, sun_azimuth_angle=0, sun_altitude_angle=75)", 
+                "infraction points": 0.0, 
+                "avg. route points": 51.7483406419163, 
+                "total avg.": 51.7483406419163
             }, 
-            "stderr": "\n==================================\n==[r0:SUCCESS] [Score = 72.00 : (route_score=100.0, infractions=-28.0)]\n===== Collisions:\n========== Agent collided against object with type=vehicle.ford.mustang and id=326\n========== Agent collided against object with type=vehicle.ford.mustang and id=342\n===== Red lights:\n========== Agent ran a red light 127 at (x=146.0, y=184.829971313, x=0.219999998808)\n========== Agent ran a red light 141 at (x=39.2700004578, y=227.129989624, x=0.219999998808)\n========== Agent ran a red light 124 at (x=122.480003357, y=243.816986084, x=0.219999998808)\n========== Agent ran a red light 135 at (x=179.220016479, y=243.73991394, x=0.219999998808)\n===== Wrong way:\n========== Agent invaded a lane in opposite direction: road_id=6, lane_id=-1\n===== Sidewalk invasions:\n========== Agent invaded the sidewalk\n==================================\n\n"
+            "stderr": "\n==================================\n==[r0:TIMEOUT] [Score = 39.67 : (route_score=39.6662613581, infractions=-0.0)]\n==================================\n\n\n==================================\n==[r1:TIMEOUT] [Score = 63.83 : (route_score=63.8304199257, infractions=-0.0)]\n==================================\n\n"
         }
     ]
 }

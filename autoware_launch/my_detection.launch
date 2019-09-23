@@ -26,7 +26,7 @@
 
   <!-- lidar_euclidean_cluster_detect -->
   <include file="$(find lidar_euclidean_cluster_detect)/launch/lidar_euclidean_cluster_detect.launch">
-    <arg name="output_frame" value="base_link" />
+    <arg name="output_frame" value="/base_link" />
   </include>
 
   <!-- pixel_cloud_fusion -->
