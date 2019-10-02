@@ -13,7 +13,7 @@ echo "export TEAM_CODE_ROOT"
 export CARLA_MAPS_PATH=~/carla-autoware/autoware_data/point_map
 echo "export CARLA_MAPS_PATH"
 
-export CARLA_AUTOWARE_ROOT=~/carla-autoware/
+export CARLA_AUTOWARE_ROOT=~/carla-autoware
 echo "export CARLA_AUTOWARE_ROOT"
 
 

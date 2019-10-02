@@ -69,3 +69,8 @@ autoware,0.0,100.0,100.0,"WeatherParameters(cloudyness=0, precipitation=0, preci
 ==================================
 
 "
+autoware,0.0,0.0,0.0,"WeatherParameters(cloudyness=0, precipitation=0, precipitation_deposits=0, wind_intensity=0.35, sun_azimuth_angle=0, sun_altitude_angle=75)",
+autoware,0.0,0.0,0.0,"WeatherParameters(cloudyness=0, precipitation=0, precipitation_deposits=0, wind_intensity=0.35, sun_azimuth_angle=0, sun_altitude_angle=75)",
+autoware,0.0,0.0,0.0,"WeatherParameters(cloudyness=0, precipitation=0, precipitation_deposits=0, wind_intensity=0.35, sun_azimuth_angle=0, sun_altitude_angle=75)",
+autoware,0.0,0.0,0.0,"WeatherParameters(cloudyness=0, precipitation=0, precipitation_deposits=0, wind_intensity=0.35, sun_azimuth_angle=0, sun_altitude_angle=75)",
+autoware,0.0,0.0,0.0,"WeatherParameters(cloudyness=0, precipitation=0, precipitation_deposits=0, wind_intensity=0.35, sun_azimuth_angle=0, sun_altitude_angle=75)",

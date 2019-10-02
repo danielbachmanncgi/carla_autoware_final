@@ -20,10 +20,10 @@
 
   <include file="$(find carla_autoware_bridge)/launch/carla_autoware_bridge_common.launch"/>
 
-  <!-- <include file="$(find carla_points_map_loader)/launch/carla_points_map_loader.launch"/> -->
+   <include file="$(find carla_points_map_loader)/launch/carla_points_map_loader.launch"/>
   
 
-  <include file="$(env CARLA_AUTOWARE_ROOT)/autoware.launch"/> 
+  <include file="$(env CARLA_AUTOWARE_ROOT)/autoware_launch/autoware.launch"/> 
 
 </launch>
 
