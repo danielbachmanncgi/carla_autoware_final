@@ -96,7 +96,7 @@ namespace message_traits
 
 
 // BOOLTRAITS {'IsFixedSize': True, 'IsMessage': True, 'HasHeader': False}
-// {'geometry_msgs': ['/opt/ros/melodic/share/geometry_msgs/cmake/../msg'], 'carla_msgs': ['/home/carla/carla-autoware/catkin_ws/src/ros-bridge/carla_msgs/msg'], 'carla_ackermann_control': ['/home/carla/carla-autoware/catkin_ws/src/ros-bridge/carla_ackermann_control/msg'], 'std_msgs': ['/opt/ros/melodic/share/std_msgs/cmake/../msg']}
+// {'geometry_msgs': ['/opt/ros/kinetic/share/geometry_msgs/cmake/../msg'], 'carla_msgs': ['/home/lukas/carla/carla-autoware/catkin_ws/src/ros-bridge/carla_msgs/msg'], 'carla_ackermann_control': ['/home/lukas/carla/carla-autoware/catkin_ws/src/ros-bridge/carla_ackermann_control/msg'], 'std_msgs': ['/opt/ros/kinetic/share/std_msgs/cmake/../msg']}
 
 // !!!!!!!!!!! ['__class__', '__delattr__', '__dict__', '__doc__', '__eq__', '__format__', '__getattribute__', '__hash__', '__init__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_parsed_fields', 'constants', 'fields', 'full_name', 'has_header', 'header_present', 'names', 'package', 'parsed_fields', 'short_name', 'text', 'types']
 
@@ -163,22 +163,22 @@ struct Definition< ::carla_ackermann_control::EgoVehicleControlMaxima_<Container
 {
   static const char* value()
   {
-    return "#\n"
-"# Copyright (c) 2018-2019 Intel Corporation.\n"
-"#\n"
-"# This work is licensed under the terms of the MIT license.\n"
-"# For a copy, see <https://opensource.org/licenses/MIT>.\n"
-"#\n"
-"# This represents some ego vehicle control maximal values\n"
-"\n"
-"# vehicle maximum values\n"
-"float32 max_steering_angle\n"
-"float32 max_speed\n"
-"float32 max_accel\n"
-"float32 max_decel\n"
-"float32 min_accel\n"
-"float32 max_pedal\n"
-;
+    return "#\n\
+# Copyright (c) 2018-2019 Intel Corporation.\n\
+#\n\
+# This work is licensed under the terms of the MIT license.\n\
+# For a copy, see <https://opensource.org/licenses/MIT>.\n\
+#\n\
+# This represents some ego vehicle control maximal values\n\
+\n\
+# vehicle maximum values\n\
+float32 max_steering_angle\n\
+float32 max_speed\n\
+float32 max_accel\n\
+float32 max_decel\n\
+float32 min_accel\n\
+float32 max_pedal\n\
+";
   }
 
   static const char* value(const ::carla_ackermann_control::EgoVehicleControlMaxima_<ContainerAllocator>&) { return value(); }

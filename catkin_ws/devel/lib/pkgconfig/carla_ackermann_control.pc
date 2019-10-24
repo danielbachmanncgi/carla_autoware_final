@@ -1,8 +1,8 @@
-prefix=/home/carla/carla-autoware/catkin_ws/devel
+prefix=/home/lukas/carla/carla-autoware/catkin_ws/devel
 
 Name: carla_ackermann_control
 Description: Description of carla_ackermann_control
 Version: 0.0.0
-Cflags: -I/home/carla/carla-autoware/catkin_ws/devel/include
-Libs: -L/home/carla/carla-autoware/catkin_ws/devel/lib 
+Cflags: -I/home/lukas/carla/carla-autoware/catkin_ws/devel/include
+Libs: -L/home/lukas/carla/carla-autoware/catkin_ws/devel/lib 
 Requires: 

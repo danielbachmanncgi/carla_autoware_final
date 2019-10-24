@@ -30,7 +30,7 @@
     @todo: to reduce load, Autoware should directly use the Carla-topic.
   -->
   <node pkg="topic_tools" type="relay" name="imag_relay" args="/carla/ego_vehicle/camera/rgb/front/image_color /image_raw"/>
-
+  <node pkg="topic_tools" type="relay" name="imag_info_relay" args="/carla/ego_vehicle/camera/rgb/front/camera_info /camera_info"/>
   <!-- 
     # GNSS #
     Extract the pose from the carla odometry. 

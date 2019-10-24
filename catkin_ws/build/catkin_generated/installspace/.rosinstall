@@ -1,2 +1,2 @@
 - setup-file:
-    local-name: /home/carla/carla-autoware/catkin_ws/install/setup.sh
+    local-name: /home/lukas/carla/carla-autoware/catkin_ws/install/setup.sh

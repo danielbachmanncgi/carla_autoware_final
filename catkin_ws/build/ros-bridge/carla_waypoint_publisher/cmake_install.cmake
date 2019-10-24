@@ -1,8 +1,8 @@
-# Install script for directory: /home/carla/carla-autoware/catkin_ws/src/ros-bridge/carla_waypoint_publisher
+# Install script for directory: /home/lukas/carla/carla-autoware/catkin_ws/src/ros-bridge/carla_waypoint_publisher
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/carla/carla-autoware/catkin_ws/install")
+  set(CMAKE_INSTALL_PREFIX "/home/lukas/carla/carla-autoware/catkin_ws/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -32,35 +32,30 @@ if(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
   set(CMAKE_INSTALL_SO_NO_EXE "1")
 endif()
 
-# Is this installation the result of a crosscompile?
-if(NOT DEFINED CMAKE_CROSSCOMPILING)
-  set(CMAKE_CROSSCOMPILING "FALSE")
+if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
+  include("/home/lukas/carla/carla-autoware/catkin_ws/build/ros-bridge/carla_waypoint_publisher/catkin_generated/safe_execute_install.cmake")
 endif()
 
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  include("/home/carla/carla-autoware/catkin_ws/build/ros-bridge/carla_waypoint_publisher/catkin_generated/safe_execute_install.cmake")
+if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/lukas/carla/carla-autoware/catkin_ws/build/ros-bridge/carla_waypoint_publisher/catkin_generated/installspace/carla_waypoint_publisher.pc")
 endif()
 
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/carla/carla-autoware/catkin_ws/build/ros-bridge/carla_waypoint_publisher/catkin_generated/installspace/carla_waypoint_publisher.pc")
-endif()
-
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/carla_waypoint_publisher/cmake" TYPE FILE FILES
-    "/home/carla/carla-autoware/catkin_ws/build/ros-bridge/carla_waypoint_publisher/catkin_generated/installspace/carla_waypoint_publisherConfig.cmake"
-    "/home/carla/carla-autoware/catkin_ws/build/ros-bridge/carla_waypoint_publisher/catkin_generated/installspace/carla_waypoint_publisherConfig-version.cmake"
+    "/home/lukas/carla/carla-autoware/catkin_ws/build/ros-bridge/carla_waypoint_publisher/catkin_generated/installspace/carla_waypoint_publisherConfig.cmake"
+    "/home/lukas/carla/carla-autoware/catkin_ws/build/ros-bridge/carla_waypoint_publisher/catkin_generated/installspace/carla_waypoint_publisherConfig-version.cmake"
     )
 endif()
 
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/carla_waypoint_publisher" TYPE FILE FILES "/home/carla/carla-autoware/catkin_ws/src/ros-bridge/carla_waypoint_publisher/package.xml")
+if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/carla_waypoint_publisher" TYPE FILE FILES "/home/lukas/carla/carla-autoware/catkin_ws/src/ros-bridge/carla_waypoint_publisher/package.xml")
 endif()
 
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/carla_waypoint_publisher" TYPE PROGRAM FILES "/home/carla/carla-autoware/catkin_ws/build/ros-bridge/carla_waypoint_publisher/catkin_generated/installspace/carla_waypoint_publisher.py")
+if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/carla_waypoint_publisher" TYPE PROGRAM FILES "/home/lukas/carla/carla-autoware/catkin_ws/build/ros-bridge/carla_waypoint_publisher/catkin_generated/installspace/carla_waypoint_publisher.py")
 endif()
 
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/carla_waypoint_publisher/launch" TYPE DIRECTORY FILES "/home/carla/carla-autoware/catkin_ws/src/ros-bridge/carla_waypoint_publisher/launch/")
+if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/carla_waypoint_publisher/launch" TYPE DIRECTORY FILES "/home/lukas/carla/carla-autoware/catkin_ws/src/ros-bridge/carla_waypoint_publisher/launch/")
 endif()
 

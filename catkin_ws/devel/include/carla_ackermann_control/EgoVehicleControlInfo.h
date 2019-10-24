@@ -102,7 +102,7 @@ namespace message_traits
 
 
 // BOOLTRAITS {'IsFixedSize': False, 'IsMessage': True, 'HasHeader': True}
-// {'geometry_msgs': ['/opt/ros/melodic/share/geometry_msgs/cmake/../msg'], 'carla_msgs': ['/home/carla/carla-autoware/catkin_ws/src/ros-bridge/carla_msgs/msg'], 'carla_ackermann_control': ['/home/carla/carla-autoware/catkin_ws/src/ros-bridge/carla_ackermann_control/msg'], 'std_msgs': ['/opt/ros/melodic/share/std_msgs/cmake/../msg']}
+// {'geometry_msgs': ['/opt/ros/kinetic/share/geometry_msgs/cmake/../msg'], 'carla_msgs': ['/home/lukas/carla/carla-autoware/catkin_ws/src/ros-bridge/carla_msgs/msg'], 'carla_ackermann_control': ['/home/lukas/carla/carla-autoware/catkin_ws/src/ros-bridge/carla_ackermann_control/msg'], 'std_msgs': ['/opt/ros/kinetic/share/std_msgs/cmake/../msg']}
 
 // !!!!!!!!!!! ['__class__', '__delattr__', '__dict__', '__doc__', '__eq__', '__format__', '__getattribute__', '__hash__', '__init__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_parsed_fields', 'constants', 'fields', 'full_name', 'has_header', 'header_present', 'names', 'package', 'parsed_fields', 'short_name', 'text', 'types']
 
@@ -169,156 +169,158 @@ struct Definition< ::carla_ackermann_control::EgoVehicleControlInfo_<ContainerAl
 {
   static const char* value()
   {
-    return "#\n"
-"# Copyright (c) 2018-2019 Intel Corporation.\n"
-"#\n"
-"# This work is licensed under the terms of the MIT license.\n"
-"# For a copy, see <https://opensource.org/licenses/MIT>.\n"
-"#\n"
-"# This represents an info message of the ego vehicle\n"
-"\n"
-"Header header\n"
-"\n"
-"# the restrictions\n"
-"EgoVehicleControlMaxima restrictions\n"
-"\n"
-"# the target values\n"
-"EgoVehicleControlTarget target\n"
-"\n"
-"# the currently measured values\n"
-"EgoVehicleControlCurrent current\n"
-"\n"
-"# the current control status\n"
-"EgoVehicleControlStatus status\n"
-"\n"
-"# the current control output to CARLA\n"
-"carla_msgs/CarlaEgoVehicleControl output\n"
-"\n"
-"================================================================================\n"
-"MSG: std_msgs/Header\n"
-"# Standard metadata for higher-level stamped data types.\n"
-"# This is generally used to communicate timestamped data \n"
-"# in a particular coordinate frame.\n"
-"# \n"
-"# sequence ID: consecutively increasing ID \n"
-"uint32 seq\n"
-"#Two-integer timestamp that is expressed as:\n"
-"# * stamp.sec: seconds (stamp_secs) since epoch (in Python the variable is called 'secs')\n"
-"# * stamp.nsec: nanoseconds since stamp_secs (in Python the variable is called 'nsecs')\n"
-"# time-handling sugar is provided by the client library\n"
-"time stamp\n"
-"#Frame this data is associated with\n"
-"string frame_id\n"
-"\n"
-"================================================================================\n"
-"MSG: carla_ackermann_control/EgoVehicleControlMaxima\n"
-"#\n"
-"# Copyright (c) 2018-2019 Intel Corporation.\n"
-"#\n"
-"# This work is licensed under the terms of the MIT license.\n"
-"# For a copy, see <https://opensource.org/licenses/MIT>.\n"
-"#\n"
-"# This represents some ego vehicle control maximal values\n"
-"\n"
-"# vehicle maximum values\n"
-"float32 max_steering_angle\n"
-"float32 max_speed\n"
-"float32 max_accel\n"
-"float32 max_decel\n"
-"float32 min_accel\n"
-"float32 max_pedal\n"
-"\n"
-"================================================================================\n"
-"MSG: carla_ackermann_control/EgoVehicleControlTarget\n"
-"#\n"
-"# Copyright (c) 2018-2019 Intel Corporation.\n"
-"#\n"
-"# This work is licensed under the terms of the MIT license.\n"
-"# For a copy, see <https://opensource.org/licenses/MIT>.\n"
-"#\n"
-"# This represents the target speed/accel values of the ego vehicle\n"
-"\n"
-"float32 steering_angle\n"
-"float32 speed\n"
-"float32 speed_abs\n"
-"float32 accel\n"
-"float32 jerk\n"
-"\n"
-"================================================================================\n"
-"MSG: carla_ackermann_control/EgoVehicleControlCurrent\n"
-"#\n"
-"# Copyright (c) 2018-2019 Intel Corporation.\n"
-"#\n"
-"# This work is licensed under the terms of the MIT license.\n"
-"# For a copy, see <https://opensource.org/licenses/MIT>.\n"
-"#\n"
-"# This represents the current time/speed/accel values of the vehicle used by the controller\n"
-"\n"
-"float32 time_sec\n"
-"float32 speed\n"
-"float32 speed_abs\n"
-"float32 accel\n"
-"================================================================================\n"
-"MSG: carla_ackermann_control/EgoVehicleControlStatus\n"
-"#\n"
-"# Copyright (c) 2018-2019 Intel Corporation.\n"
-"#\n"
-"# This work is licensed under the terms of the MIT license.\n"
-"# For a copy, see <https://opensource.org/licenses/MIT>.\n"
-"#\n"
-"# This represents the control status variables of the ego vehicle control\n"
-"\n"
-"# the current control status\n"
-"string status\n"
-"\n"
-"# speed controller\n"
-"uint8   speed_control_activation_count\n"
-"float32 speed_control_accel_delta\n"
-"float32 speed_control_accel_target\n"
-"\n"
-"# acceleration controller\n"
-"float32 accel_control_pedal_delta\n"
-"float32 accel_control_pedal_target\n"
-"\n"
-"# borders for lay off pedal\n"
-"float32 brake_upper_border\n"
-"float32 throttle_lower_border\n"
-"\n"
-"================================================================================\n"
-"MSG: carla_msgs/CarlaEgoVehicleControl\n"
-"#\n"
-"# Copyright (c) 2018-2019 Intel Corporation.\n"
-"#\n"
-"# This work is licensed under the terms of the MIT license.\n"
-"# For a copy, see <https://opensource.org/licenses/MIT>.\n"
-"#\n"
-"# This represents a vehicle control message sent to CARLA simulator\n"
-"\n"
-"Header header\n"
-"\n"
-"# The CARLA vehicle control data\n"
-"\n"
-"# 0. <= throttle <= 1.\n"
-"float32 throttle\n"
-"\n"
-"# -1. <= steer <= 1.\n"
-"float32 steer\n"
-"\n"
-"# 0. <= brake <= 1.\n"
-"float32 brake\n"
-"\n"
-"# hand_brake 0 or 1\n"
-"bool hand_brake\n"
-"\n"
-"# reverse 0 or 1\n"
-"bool reverse\n"
-"\n"
-"# gear\n"
-"int32 gear\n"
-"\n"
-"# manual gear shift\n"
-"bool manual_gear_shift\n"
-;
+    return "#\n\
+# Copyright (c) 2018-2019 Intel Corporation.\n\
+#\n\
+# This work is licensed under the terms of the MIT license.\n\
+# For a copy, see <https://opensource.org/licenses/MIT>.\n\
+#\n\
+# This represents an info message of the ego vehicle\n\
+\n\
+Header header\n\
+\n\
+# the restrictions\n\
+EgoVehicleControlMaxima restrictions\n\
+\n\
+# the target values\n\
+EgoVehicleControlTarget target\n\
+\n\
+# the currently measured values\n\
+EgoVehicleControlCurrent current\n\
+\n\
+# the current control status\n\
+EgoVehicleControlStatus status\n\
+\n\
+# the current control output to CARLA\n\
+carla_msgs/CarlaEgoVehicleControl output\n\
+\n\
+================================================================================\n\
+MSG: std_msgs/Header\n\
+# Standard metadata for higher-level stamped data types.\n\
+# This is generally used to communicate timestamped data \n\
+# in a particular coordinate frame.\n\
+# \n\
+# sequence ID: consecutively increasing ID \n\
+uint32 seq\n\
+#Two-integer timestamp that is expressed as:\n\
+# * stamp.sec: seconds (stamp_secs) since epoch (in Python the variable is called 'secs')\n\
+# * stamp.nsec: nanoseconds since stamp_secs (in Python the variable is called 'nsecs')\n\
+# time-handling sugar is provided by the client library\n\
+time stamp\n\
+#Frame this data is associated with\n\
+# 0: no frame\n\
+# 1: global frame\n\
+string frame_id\n\
+\n\
+================================================================================\n\
+MSG: carla_ackermann_control/EgoVehicleControlMaxima\n\
+#\n\
+# Copyright (c) 2018-2019 Intel Corporation.\n\
+#\n\
+# This work is licensed under the terms of the MIT license.\n\
+# For a copy, see <https://opensource.org/licenses/MIT>.\n\
+#\n\
+# This represents some ego vehicle control maximal values\n\
+\n\
+# vehicle maximum values\n\
+float32 max_steering_angle\n\
+float32 max_speed\n\
+float32 max_accel\n\
+float32 max_decel\n\
+float32 min_accel\n\
+float32 max_pedal\n\
+\n\
+================================================================================\n\
+MSG: carla_ackermann_control/EgoVehicleControlTarget\n\
+#\n\
+# Copyright (c) 2018-2019 Intel Corporation.\n\
+#\n\
+# This work is licensed under the terms of the MIT license.\n\
+# For a copy, see <https://opensource.org/licenses/MIT>.\n\
+#\n\
+# This represents the target speed/accel values of the ego vehicle\n\
+\n\
+float32 steering_angle\n\
+float32 speed\n\
+float32 speed_abs\n\
+float32 accel\n\
+float32 jerk\n\
+\n\
+================================================================================\n\
+MSG: carla_ackermann_control/EgoVehicleControlCurrent\n\
+#\n\
+# Copyright (c) 2018-2019 Intel Corporation.\n\
+#\n\
+# This work is licensed under the terms of the MIT license.\n\
+# For a copy, see <https://opensource.org/licenses/MIT>.\n\
+#\n\
+# This represents the current time/speed/accel values of the vehicle used by the controller\n\
+\n\
+float32 time_sec\n\
+float32 speed\n\
+float32 speed_abs\n\
+float32 accel\n\
+================================================================================\n\
+MSG: carla_ackermann_control/EgoVehicleControlStatus\n\
+#\n\
+# Copyright (c) 2018-2019 Intel Corporation.\n\
+#\n\
+# This work is licensed under the terms of the MIT license.\n\
+# For a copy, see <https://opensource.org/licenses/MIT>.\n\
+#\n\
+# This represents the control status variables of the ego vehicle control\n\
+\n\
+# the current control status\n\
+string status\n\
+\n\
+# speed controller\n\
+uint8   speed_control_activation_count\n\
+float32 speed_control_accel_delta\n\
+float32 speed_control_accel_target\n\
+\n\
+# acceleration controller\n\
+float32 accel_control_pedal_delta\n\
+float32 accel_control_pedal_target\n\
+\n\
+# borders for lay off pedal\n\
+float32 brake_upper_border\n\
+float32 throttle_lower_border\n\
+\n\
+================================================================================\n\
+MSG: carla_msgs/CarlaEgoVehicleControl\n\
+#\n\
+# Copyright (c) 2018-2019 Intel Corporation.\n\
+#\n\
+# This work is licensed under the terms of the MIT license.\n\
+# For a copy, see <https://opensource.org/licenses/MIT>.\n\
+#\n\
+# This represents a vehicle control message sent to CARLA simulator\n\
+\n\
+Header header\n\
+\n\
+# The CARLA vehicle control data\n\
+\n\
+# 0. <= throttle <= 1.\n\
+float32 throttle\n\
+\n\
+# -1. <= steer <= 1.\n\
+float32 steer\n\
+\n\
+# 0. <= brake <= 1.\n\
+float32 brake\n\
+\n\
+# hand_brake 0 or 1\n\
+bool hand_brake\n\
+\n\
+# reverse 0 or 1\n\
+bool reverse\n\
+\n\
+# gear\n\
+int32 gear\n\
+\n\
+# manual gear shift\n\
+bool manual_gear_shift\n\
+";
   }
 
   static const char* value(const ::carla_ackermann_control::EgoVehicleControlInfo_<ContainerAllocator>&) { return value(); }

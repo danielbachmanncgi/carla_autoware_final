@@ -27,7 +27,7 @@ def path_callback(data):
     for pose in data.poses:
         waypoint = Waypoint()
         waypoint.pose = pose
-        waypoint.twist.twist.linear.x = 8.33 #set base velocity to 30kmph
+        waypoint.twist.twist.linear.x = 8.333 #set base velocity to 30kmph
         msg.lanes[0].waypoints.append(waypoint)
 
     pub.publish(msg)

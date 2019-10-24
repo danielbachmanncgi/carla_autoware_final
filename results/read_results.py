@@ -3,8 +3,15 @@
 import json
 import csv
 
+JSON_FILE_PATH = '/home/lukas/carla/carla-aautoware/results/results.json'
+CSV_FILE_PATH = '/home/lukas/carla/carla-autoware/results/total_results.csv'
+
 def main():
-    with open('/home/carla/carla-autoware/results/results.json') as json_file:
+    """
+    Load results for previous route from json file and append line to the total_results.csv file
+    
+    """
+    with open(JSON_FILE_PATH) as json_file:
 
         data = json.load(json_file)
 
@@ -16,7 +23,7 @@ def main():
 
     row = ['autoware', infraction_points, avg_route_points, total_avg, weather ,infractions]
 
-    with open('/home/carla/carla-autoware/results/total_results.csv', 'a') as csvFile:
+    with open(CSV_FILE_PATH, 'a') as csvFile:
         writer = csv.writer(csvFile)
         writer.writerow(row)
     csvFile.close()
@@ -24,5 +31,4 @@ def main():
 
 
 if __name__ == '__main__':
-
     main()

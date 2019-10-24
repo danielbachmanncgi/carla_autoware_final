@@ -17,6 +17,7 @@ import glob
 import os
 import sys
 import rospy
+import time
 from std_msgs.msg import String
 
 try:
@@ -33,51 +34,84 @@ import argparse
 import math
 
 class Counter():
+    """
+    Counter object, counting the runs of the current assessment
+    """
     def __init__(self):
-        self.count = 1
+        """
+        Init Counter and set the count to 0 and the weather to 1
+
+        :param self: Counter
+        :type self: Counter
+        """
+        self.count = 0
+        self.weather = 1
 
 def change_weather(data):
+    """
+    Recieve weather changing request
+
+    :param data: Change Request
+    :type data: String
+    """
+    
     print("change requested")
     set_weather()
 
 def set_weather():
+    """
+    Set current weather (change current weather after 5 routes)
+
+    """
     weahter_dict = {
         1 : carla.WeatherParameters.ClearNoon,
-        2 : carla.WeatherParameters.CloudyNoon,
-        3 : carla.WeatherParameters.WetNoon,
-        4 : carla.WeatherParameters.WetCloudyNoon,
-        5 : carla.WeatherParameters.MidRainyNoon,
-        6 : carla.WeatherParameters.HardRainNoon,
-        7 : carla.WeatherParameters.SoftRainNoon,
-        8 : carla.WeatherParameters.ClearSunset,
-        9 : carla.WeatherParameters.WetSunset,
-        10 : carla.WeatherParameters.MidRainSunset,
-        11 : carla.WeatherParameters.HardRainSunset,
-        12 : carla.WeatherParameters.SoftRainSunset,
+        2 : carla.WeatherParameters.WetNoon,
+        3 : carla.WeatherParameters.HardRainNoon,
+        4 : carla.WeatherParameters.ClearSunset,
+        5 : carla.WeatherParameters.WetSunset,
+        6 : carla.WeatherParameters.HardRainSunset,
     }
     
     print("request recieved")
     print("count: ", count.count)
+    time.sleep(10)
     client = carla.Client("127.0.0.1", 2000)
     client.set_timeout(2.0)
     world = client.get_world()
-    world.set_weather(weahter_dict[count.count])
-    print("set weather to")
-    print(weahter_dict[count.count])
+    world.set_weather(weahter_dict[count.weather])
+    print("set weather to No. " , str(count.weather))
+    print(weahter_dict[count.weather])
 
-    if count.count < 12:
+    if count.count==5 or count.count==11 or count.count==17 or count.count==23 or count.count==29:
         count.count = count.count + 1
+        print "change weather"
+        if count.weather>=6:
+            count.weather=1
+        else:
+            count.weather = count.weather + 1
+            print "next weather"
+    elif count.count == 35:
+        count.count = 0
+        count.weather = 1
     else:
-        count.count = 1
+        count.count = count.count + 1
     
 
 def setup():
+    """
+    Setup subscriber and counter
+
+    """
     rospy.Subscriber("carla_weather", String, change_weather)
     global count
     count = Counter()
 
 
 def main():
+    """
+    Init node and run setup
+
+    """
     rospy.init_node("carla_weather")
     setup()
 

@@ -5,23 +5,23 @@
             "accuracies": {
                 "weather": "WeatherParameters(cloudyness=0, precipitation=0, precipitation_deposits=0, wind_intensity=0.35, sun_azimuth_angle=0, sun_altitude_angle=75)", 
                 "infraction points": 0.0, 
-                "avg. route points": 0.0, 
-                "total avg.": 0.0
+                "avg. route points": 100.0, 
+                "total avg.": 100.0
             }, 
             "show_to_participant": true, 
             "split": "dev_split"
         }
     ], 
-    "stderr": "", 
+    "stderr": "\n==================================\n==[r0:SUCCESS] [Score = 100.00 : (route_score=100.0, infractions=-0.0)]\n==================================\n\n", 
     "metadata": [
         {
             "accuracies": {
                 "weather": "WeatherParameters(cloudyness=0, precipitation=0, precipitation_deposits=0, wind_intensity=0.35, sun_azimuth_angle=0, sun_altitude_angle=75)", 
                 "infraction points": 0.0, 
-                "avg. route points": 0.0, 
-                "total avg.": 0.0
+                "avg. route points": 100.0, 
+                "total avg.": 100.0
             }, 
-            "stderr": ""
+            "stderr": "\n==================================\n==[r0:SUCCESS] [Score = 100.00 : (route_score=100.0, infractions=-0.0)]\n==================================\n\n"
         }
     ]
 }

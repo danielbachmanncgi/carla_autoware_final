@@ -1,37 +1,49 @@
-
-
-
-source ~/carla-autoware/catkin_ws/devel/setup.bash
+source ~/carla/carla-autoware/catkin_ws/devel/setup.bash
 echo "source catkin_ws ok"
-
-source ~/autoware.ai/install/setup.bash
+source ~/carla/autoware.ai/install/setup.bash
 echo "source autoware ok"
-
-export TEAM_CODE_ROOT=~/carla-autoware/autoware_launch
+export TEAM_CODE_ROOT=~/carla/carla-autoware/autoware_launch
 echo "export TEAM_CODE_ROOT"
-
-export CARLA_MAPS_PATH=~/carla-autoware/autoware_data/point_map
+export CARLA_MAPS_PATH=~/carla/carla-autoware/autoware_data/point_map
 echo "export CARLA_MAPS_PATH"
-
-export CARLA_AUTOWARE_ROOT=~/carla-autoware
+export CARLA_AUTOWARE_ROOT=~/carla/carla-autoware
 echo "export CARLA_AUTOWARE_ROOT"
 
-
-for i in {1..5}
+#loop for the total runs of the assessment
+for i in {1..5} 
 do
-    echo "--change weather--"
-    rostopic pub -1 /carla_weather std_msgs/String 'change' 
+    #loop for the 6 different weather conditions
+    for k in {1..6} 
+    do
+        #declare route count variable
+        declare -i route=1
+        #loop for the 5 different routes
+        for j in {1..5} 
+        do
+            export ROUTE_COUNT=$route
+            echo "route -- " $ROUTE_COUNT
 
-    echo "--run challenge--"
-    python $ROOT_SCENARIO_RUNNER/srunner/challenge/challenge_evaluator_routes.py  \
-        --scenarios=$CARLA_AUTOWARE_ROOT/challenge/Town02_traffic_scenarios1_3_4.json \
-        --routes=$CARLA_AUTOWARE_ROOT/challenge/Town02_route_01.json \
-        --agent=$CARLA_AUTOWARE_ROOT/challenge/AutowareRosAgent.py \
-        --filename=$CARLA_AUTOWARE_ROOT/results/results.json \
-        --debug=1 
+            echo "--change weather--"
+            #publish weather change request
+            rostopic pub -1 /carla_weather std_msgs/String "change" 
 
-    sleep 2
+            echo "--run challenge--"
+            #run challenge evaluator script with the current route
+            python $ROOT_SCENARIO_RUNNER/srunner/challenge/challenge_evaluator_routes.py  \
+                --scenarios=$CARLA_AUTOWARE_ROOT/challenge/Town02_traffic_scenarios1_3_4.json \
+                --routes=$CARLA_AUTOWARE_ROOT/challenge/routes/Town02_route_$ROUTE_COUNT.xml \
+                --agent=$CARLA_AUTOWARE_ROOT/challenge/AutowareRosAgent.py \
+                --filename=$CARLA_AUTOWARE_ROOT/results/results.json \
+                --debug=1 
 
-    echo "--save results--"
-    python $CARLA_AUTOWARE_ROOT/results/read_results.py
+            sleep 2
+
+            echo "--save results--"
+            #read results from json file into csv file
+            python $CARLA_AUTOWARE_ROOT/results/read_results.py
+
+            #set route count to the next route
+            declare -i route=$route+1
+        done
+    done
 done
